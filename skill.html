@@ -3,164 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Skills - Jabir Uddin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body{background-color: black;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header {
-    background-color: #2c3e50;
-    padding: 20px 0;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-nav .logo h1 {
-    color: #ecf0f1;
-    font-size: 24px;
-}
-.nav-links {
-    list-style-type: none;
-}
-.nav-links li {
-    display: inline-block;
-    margin-left: 30px;
-}
-.nav-links li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 18px;
-}
-.nav-links li a:hover {
-    color: #3498db;
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a192f;
+            color: #8892b0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: rgba(10, 25, 47, 0.85);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav .logo h1 {
+            color: #64ffda;
+            font-size: 24px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        nav .logo h1:hover {
+            transform: translateY(-2px);
+        }
+
+        .nav-links {
+            list-style-type: none;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin-left: 30px;
+        }
+
+        .nav-links li a {
+            color: #ccd6f6;
+            text-decoration: none;
+            font-size: 16px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #64ffda;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: #64ffda;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        .section {
+            padding: 120px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         h2 {
-    font-size: 36px;
-    color: #131313;
-    margin-bottom: 20px;
-    text-align: center;
-    background-color: #3498db;
-}
-        /* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background-color: transparent;
-    border: 0.2rem solid #b74b4b;
-    font-size: 2rem;
-    border-radius: 50%;
-    margin: 3rem 1.5rem 3rem 0;
-    transition: 0.3s ease;
-    color: #b74b4b;
-    
-}
+            font-size: 2.5em;
+            color: #ccd6f6;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
 
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #64ffda, transparent);
+        }
 
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
 
-.skill1:hover{color: black;
-    background-color: #b74b42;
-    box-shadow: 0  0 25px #b74b4b;}
-    .skill2:hover{color: black;
-    background-color: #42d4b2;
-    box-shadow: 0  0 25px #b74b4b;}
-    .skill3:hover{color: black;
-    background-color: #b74b4b;
-    box-shadow: 0  0 25px #b74b4b;}
-    .skill4:hover{color: black;
-    background-color: #42d4b2;
-    box-shadow: 0  0 25px #b74b4b;}
-    .skill5:hover{color: black;
-    background-color: #b74b4b;
-    box-shadow: 0  0 25px #b74b4b;}
-.skill1 {
-    background-color: #f1ecec;
-    border-radius: 48px;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 448px;
-    height:9vh;
-    padding: 20vh; 
-}
-.skill2{background-color: #f1ecec;
-    border-radius: 48px;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 448px;
-    height:9vh;
-    padding: 20vh; }
-.skill3 {background-color: #f1ecec;
-    border-radius: 48px;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 448px;
-    height:9vh;
-    padding: 20vh; }
-.skill4 {background-color: #f1ecec;
-    border-radius: 48px;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 448px;
-    height:9vh;
-    padding: 20vh; }
-.skill5 {background-color: #f1ecec;
-    border-radius: 48px;
-    font-size: 60px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 448px;
-    height:9vh;
-    padding: 20vh; }
+        .skill-card {
+            background: rgba(17, 34, 64, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            backdrop-filter: blur(10px);
+        }
 
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(100, 255, 218, 0.1),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+            pointer-events: none;
+        }
 
+        @keyframes shine {
+            0% {
+                transform: translateX(-100%) rotate(45deg);
+            }
+            100% {
+                transform: translateX(100%) rotate(45deg);
+            }
+        }
 
+        .skill-icon {
+            font-size: 40px;
+            color: #64ffda;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .skill-name {
+            position: relative;
+            display: inline-block;
+        }
+
+        .skill-name::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: #64ffda;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover .skill-name::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .skill-description {
+            color: #8892b0;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .skill-progress {
+            width: 100%;
+            height: 6px;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #64ffda, #00b4d8);
+            border-radius: 3px;
+            transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(100, 255, 218, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(100, 255, 218, 0.8);
+            }
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(100, 255, 218, 0.2);
+            border-color: rgba(100, 255, 218, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .skills-container {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+
+            .skill-card {
+                padding: 20px;
+            }
+
+            nav {
+                padding: 0 15px;
+            }
+
+            .nav-links li {
+                margin-left: 15px;
+            }
+
+            .nav-links li a {
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
-
-     <!-- Navbar Section -->
-     <header>
+    <header>
         <nav>
             <div class="logo">
                 <h1>Jabir Uddin</h1>
             </div>
             <ul class="nav-links">
-                <li><a href="/about.html">About Me</a></li>
-                <li><a href="/skill.html">Skills</a></li>
-                <li><a href="/project.html">Projects</a></li>
-                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="skill.html">Skills</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- Skills Section -->
+
     <section id="skills" class="section">
-        <div class="section-container">
-            <h2>My Skills</h2>
-            <div class="skills-container">
-                <div class="skill1">HTML5</div>
-                <div class="skill2">CSS3</div>
-                <div class="skill3">Leadership</div>
-                <div class="skill4">Management</div>
-                <div class="skill5">Fastleraner</div>
-              
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <i class="fab fa-html5 skill-icon"></i>
+                <h3 class="skill-name">HTML5</h3>
+                <p class="skill-description">Proficient in writing semantic HTML and creating well-structured web pages with accessibility in mind.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="--progress: 90%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <h3 class="skill-name">CSS3</h3>
+                <p class="skill-description">Strong understanding of modern CSS, including Flexbox, Grid, and responsive design principles.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="--progress: 85%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-users skill-icon"></i>
+                <h3 class="skill-name">Leadership</h3>
+                <p class="skill-description">Experienced in team leadership, project coordination, and fostering collaborative environments.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="--progress: 88%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-tasks skill-icon"></i>
+                <h3 class="skill-name">Management</h3>
+                <p class="skill-description">Skilled in project management, resource allocation, and achieving project milestones efficiently.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="--progress: 82%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-brain skill-icon"></i>
+                <h3 class="skill-name">Fast Learner</h3>
+                <p class="skill-description">Quick to adapt to new technologies and methodologies, with a passion for continuous learning.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="--progress: 95%"></div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <i class="fas fa-code skill-icon"></i>
+                <h3 class="skill-name">Problem Solving</h3>
+                <p class="skill-description">Strong analytical and problem-solving abilities with attention to detail and efficiency.</p>
+                <div class="skill-progress">
+                    <div class="progress-bar" style="--progress: 87%"></div>
+                </div>
             </div>
         </div>
     </section>
- 
 </body>
 </html>
